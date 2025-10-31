@@ -65,3 +65,33 @@ Six evaluation strategies were implemented to measure generalization:
 ---
 
 ## 📁 Repository Structure
+EEG-Biometric-Recognition/
+│
+├── 1_Preprocessing.ipynb
+├── 2_Feature_Extraction.ipynb
+├── 3_Model_Training.ipynb
+├── 4_Validation_Protocols.ipynb
+├── 5_Session_Disjoint.ipynb ← Final session-aware evaluation
+│
+├── /data/
+│ ├── kaggle_eeg/
+│ ├── physionet_eeg/
+│
+├── /results/
+│ ├── accuracy_reports.csv
+│ ├── confusion_matrix.png
+
+##📊 Results Summary
+| Evaluation Protocol             | Dataset                  | Accuracy (%) |
+| ------------------------------- | ------------------------ | ------------ |
+| Random k-Fold CV                | Kaggle EEG (36 subjects) | 98.7         |
+| Train/Val/Test Split (60/20/20) | Kaggle EEG               | 98.1         |
+| Random k-Fold (Window-level)    | PhysioNet                | 97.6         |
+| Session-Disjoint Split          | PhysioNet                | **92.3**     |
+| Leave-One-Session-Out (LOSO)    | PhysioNet                | 91.8         |
+
+##🔮 Future Work
+1. Integrate deep learning (CNN/LSTM) models for automated feature extraction.
+2. Explore adversarial or transfer learning for session-invariant representations.
+3. Deploy in real-time BCI (Brain-Computer Interface) scenarios.
+4. Expand dataset size for better long-term generalization.
