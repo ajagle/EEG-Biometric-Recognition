@@ -63,5 +63,3 @@ Six evaluation strategies were implemented to measure generalization:
 6. Randomized-Label Control Test (sanity check)
 
 ---
-
-## 📁 Repository Structure
